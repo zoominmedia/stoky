@@ -176,6 +176,26 @@
               </validation-provider>
             </b-col>
 
+                <!-- Provider Ice -->
+            <b-col md="6" sm="12">
+              <validation-provider
+                name="ice"
+                :rules="{ required: true}"
+                v-slot="validationContext"
+              >
+                <b-form-group :label="$t('CustomerIce') + ' ' + '*'">
+                  <b-form-input
+                    :state="getValidationState(validationContext)"
+                    aria-describedby="name-feedback"
+                    label="ice"
+                    v-model="provider.ice"
+                    :placeholder="$t('CustomerIce')"
+                  ></b-form-input>
+                  <b-form-invalid-feedback id="name-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
+                </b-form-group>
+              </validation-provider>
+            </b-col>
+
             <!-- Provider Email -->
             <b-col md="6" sm="12">
               <validation-provider
@@ -416,6 +436,7 @@ export default {
       provider: {
         id: "",
         name: "",
+        ice: "",
         code: "",
         phone: "",
         email: "",
@@ -442,6 +463,13 @@ export default {
           tdClass: "text-left",
           thClass: "text-left"
         },
+         {
+          label: this.$t("CustomerIce"),
+          field: "ice",
+          tdClass: "text-left",
+          thClass: "text-left"
+        },
+
 
         {
           label: this.$t("Phone"),
@@ -722,6 +750,7 @@ export default {
       axios
         .post("providers", {
           name: this.provider.name,
+          ice: this.provider.ice,
           email: this.provider.email,
           phone: this.provider.phone,
           country: this.provider.country,
@@ -750,6 +779,7 @@ export default {
       axios
         .put("providers/" + this.provider.id, {
           name: this.provider.name,
+          ice: this.provider.ice,
           email: this.provider.email,
           phone: this.provider.phone,
           country: this.provider.country,

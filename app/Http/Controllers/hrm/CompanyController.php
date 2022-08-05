@@ -60,10 +60,12 @@ class CompanyController extends Controller
 
         request()->validate([
             'name'      => 'required|string',
+            'ice'      => 'required',
         ]);
 
         Company::create([
             'name'    => $request['name'],
+            'ice'    => $request['ice'],
             'email'   => $request['email'],
             'phone'   => $request['phone'],
             'country' => $request['country'],
@@ -91,6 +93,7 @@ class CompanyController extends Controller
 
         Company::whereId($id)->update([
             'name'    => $request['name'],
+            'ice'    => $request['ice'],
             'email'   => $request['email'],
             'phone'   => $request['phone'],
             'country' => $request['country'],

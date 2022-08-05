@@ -67,9 +67,11 @@ class ProvidersController extends BaseController
         request()->validate([
             'name' => 'required',
             'email' => 'required',
+    
         ]);
         Provider::create([
             'name' => $request['name'],
+            'ice' => $request['ice'],
             'code' => $this->getNumberOrder(),
             'adresse' => $request['adresse'],
             'phone' => $request['phone'],

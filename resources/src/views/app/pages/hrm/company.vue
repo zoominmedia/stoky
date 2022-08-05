@@ -81,6 +81,17 @@
               </validation-provider>
             </b-col>
 
+              <!-- ice -->
+            <b-col md="6">
+              <b-form-group :label="$t('CustomerIce')+ ' ' + '*'">
+                <b-form-input
+                  :placeholder="$t('CustomerIce')"
+                  label="Ice"
+                  v-model="company.ice"
+                ></b-form-input>
+              </b-form-group>
+            </b-col>
+
             <!-- Email -->
             <b-col md="6">
               <b-form-group :label="$t('Email')">
@@ -156,6 +167,7 @@ export default {
       editmode: false,
       company: {
           name: "",
+          ice: "",
           email:"",
           country:"",
           phone:"",
@@ -169,6 +181,12 @@ export default {
         {
           label: this.$t("Name"),
           field: "name",
+          tdClass: "text-left",
+          thClass: "text-left"
+        },
+         {
+          label: this.$t("CustomerIce"),
+          field: "ice",
           tdClass: "text-left",
           thClass: "text-left"
         },
@@ -343,6 +361,7 @@ export default {
       axios
         .post("company", {
           name: this.company.name,
+          ice: this.company.ice,
           email: this.company.email,
           country: this.company.country,
           phone: this.company.phone,
@@ -369,6 +388,7 @@ export default {
       axios
         .put("company/" + this.company.id, {
           name: this.company.name,
+          ice: this.company.ice,
           email: this.company.email,
           country: this.company.country,
           phone: this.company.phone,

@@ -152,6 +152,7 @@ class ClientController extends BaseController
 
         Client::whereId($id)->update([
             'name' => $request['name'],
+            'ice' => $request['ice'],
             'adresse' => $request['adresse'],
             'phone' => $request['phone'],
             'email' => $request['email'],
@@ -254,6 +255,7 @@ class ClientController extends BaseController
                     
                     Client::create([
                         'name' => $value['name'] == '' ? null : $value['name'],
+                        'ice' => $value['ice'] == '' ? null : $value['ice'],
                         'code' => $this->getNumberOrder(),
                         'adresse' => $value['adresse'] == '' ? null : $value['adresse'],
                         'phone' => $value['phone'] == '' ? null : $value['phone'],

@@ -9,7 +9,7 @@ class Provider extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-        'name', 'code', 'adresse', 'phone', 'country', 'email', 'city',
+        'name','ice','code', 'adresse', 'phone', 'country', 'email', 'city',
     ];
 
     protected $casts = [

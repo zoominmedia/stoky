@@ -18,6 +18,7 @@ class CreateProvidersTable extends Migration {
 			$table->engine = 'InnoDB';
 			$table->integer('id', true);
 			$table->string('name');
+			$table->string('ice');
 			$table->integer('code');
 			$table->string('email', 192);
 			$table->string('phone', 192);

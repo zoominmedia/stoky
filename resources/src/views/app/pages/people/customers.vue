@@ -351,6 +351,9 @@
                 </b-form-group>
               </validation-provider>
             </b-col>
+            
+
+
             <!-- Customer Email -->
             <b-col md="6" sm="12">
               <validation-provider
@@ -527,6 +530,12 @@
               <tbody>
                 <tr>
                   <td>{{$t('Name')}}</td>
+                  <th>
+                    <span class="badge badge-outline-success">{{$t('Field_is_required')}}</span>
+                  </th>
+                </tr>
+                  <tr>
+                  <td>{{$t('Ice')}}</td>
                   <th>
                     <span class="badge badge-outline-success">{{$t('Field_is_required')}}</span>
                   </th>
@@ -805,6 +814,7 @@ export default {
       let columns = [
         { title: "Code", dataKey: "code" },
         { title: "Name", dataKey: "name" },
+        { title: "ICE", dataKey: "ice" },
         { title: "Phone", dataKey: "phone" },
         { title: "Email", dataKey: "email" },
         { title: "Country", dataKey: "country" },
