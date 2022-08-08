@@ -175,26 +175,18 @@
                 </b-form-group>
               </validation-provider>
             </b-col>
-
-                <!-- Provider Ice -->
+            
+             <!-- Customer Ice -->
             <b-col md="6" sm="12">
-              <validation-provider
-                name="ice"
-                :rules="{ required: true}"
-                v-slot="validationContext"
-              >
-                <b-form-group :label="$t('CustomerIce') + ' ' + '*'">
+                <b-form-group :label="$t('CustomerIce')">
                   <b-form-input
-                    :state="getValidationState(validationContext)"
-                    aria-describedby="name-feedback"
                     label="ice"
                     v-model="provider.ice"
                     :placeholder="$t('CustomerIce')"
                   ></b-form-input>
-                  <b-form-invalid-feedback id="name-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                 </b-form-group>
-              </validation-provider>
             </b-col>
+
 
             <!-- Provider Email -->
             <b-col md="6" sm="12">
@@ -283,6 +275,11 @@
                 <td>{{$t('SupplierCode')}}</td>
                 <th>{{provider.code}}</th>
               </tr>
+                 <tr>
+                <!-- Provider Code -->
+                <td>{{$t('CustomerIce')}}</td>
+                <th>{{provider.ice}}</th>
+              </tr>
               <tr>
                 <!-- Provider Name -->
                 <td>{{$t('SupplierName')}}</td>
@@ -361,6 +358,12 @@
               <tbody>
                 <tr>
                   <td>{{$t('Name')}}</td>
+                  <th>
+                    <span class="badge badge-outline-success">{{$t('Field_is_required')}}</span>
+                  </th>
+                </tr>
+                <tr>
+                  <td>{{$t('CustomerIce')}}</td>
                   <th>
                     <span class="badge badge-outline-success">{{$t('Field_is_required')}}</span>
                   </th>
@@ -463,13 +466,12 @@ export default {
           tdClass: "text-left",
           thClass: "text-left"
         },
-         {
+        {
           label: this.$t("CustomerIce"),
           field: "ice",
           tdClass: "text-left",
           thClass: "text-left"
         },
-
 
         {
           label: this.$t("Phone"),
@@ -674,7 +676,9 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Code", dataKey: "code" },
+        { title: "ice", dataKey: "ice" },
         { title: "Name", dataKey: "name" },
+        { title: "Ice", dataKey: "ice" },
         { title: "Phone", dataKey: "phone" },
         { title: "Email", dataKey: "email" },
         { title: "Country", dataKey: "country" },

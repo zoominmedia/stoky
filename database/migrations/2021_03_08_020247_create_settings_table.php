@@ -20,6 +20,7 @@ class CreateSettingsTable extends Migration {
 			$table->string('email', 191);
 			$table->integer('currency_id')->nullable()->index('currency_id');
 			$table->string('CompanyName');
+			$table->string('CompanyIce');
 			$table->string('CompanyPhone');
 			$table->string('CompanyAdress');
 			$table->string('logo', 191)->nullable();

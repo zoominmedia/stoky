@@ -36,8 +36,8 @@
         :pagination-options="{
         enabled: true,
         mode: 'records',
-        nextLabel: 'next',
-        prevLabel: 'prev',
+        nextLabel: $t('Next'),
+        prevLabel: $t('Prev'),
       }"
         styleClass="table-hover tableOne vgt-table"
       >
@@ -111,9 +111,9 @@
                           {label: 'Cash', value: 'Cash'},
                           {label: 'cheque', value: 'cheque'},
                           {label: 'Western Union', value: 'Western Union'},
-                          {label: 'bank transfer', value: 'bank transfer'},
+                          {label: $t('bank_transfer'), value: 'bank transfer'},
                           {label: 'credit card', value: 'credit card'},
-                          {label: 'other', value: 'other'},
+                          {label: $t('other'), value: 'other'},
                           ]"
               ></v-select>
             </b-form-group>

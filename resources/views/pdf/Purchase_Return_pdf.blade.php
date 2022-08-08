@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>Return _{{$return_purchase['Ref']}}</title>
+      <title>Retour _{{$return_purchase['Ref']}}</title>
       <link rel="stylesheet" href="{{asset('/css/pdf_style.css')}}" media="all" />
    </head>
 
@@ -13,13 +13,13 @@
          </div>
          <div id="company">
             <div><strong> Date: </strong>{{$return_purchase['date']}}</div>
-            <div><strong> Number: </strong> {{$return_purchase['Ref']}}</div>
-            <div><strong> Purchase Ref: </strong> {{$return_purchase['purchase_ref']}}</div>
-            <div><strong> Status: </strong> {{$return_purchase['statut']}}</div>
-            <div><strong> Payment Status: </strong> {{$return_purchase['payment_status']}}</div>
+            <div><strong> Numéro: </strong> {{$return_purchase['Ref']}}</div>
+            <div><strong> Réf d'achat: </strong> {{$return_purchase['purchase_ref']}}</div>
+            <div><strong> Etat: </strong> {{$return_purchase['statut']}}</div>
+            <div><strong> Etat de paiement: </strong> {{$return_purchase['payment_status']}}</div>
          </div>
          <div id="Title-heading">
-            Return : {{$return_purchase['Ref']}}
+            Retour : {{$return_purchase['Ref']}}
          </div>
          </div>
       </header>
@@ -35,9 +35,10 @@
                   <tbody>
                      <tr>
                         <td>
-                           <div><strong>Name:</strong> {{$return_purchase['supplier_name']}}</div>
-                           <div><strong>Phone:</strong> {{$return_purchase['supplier_phone']}}</div>
-                           <div><strong>Address:</strong>   {{$return_purchase['supplier_adr']}}</div>
+                           <div><strong>Nom:</strong> {{$return_purchase['supplier_name']}}</div>
+                           <div><strong>ICE:</strong> {{$return_purchase['supplier_ice']}}</div>
+                           <div><strong>Téle:</strong> {{$return_purchase['supplier_phone']}}</div>
+                           <div><strong>Adresse:</strong>   {{$return_purchase['supplier_adr']}}</div>
                            <div><strong>Email:</strong>  {{$return_purchase['supplier_email']}}</div>
                         </td>
                      </tr>
@@ -48,15 +49,16 @@
                <table class="table-sm">
                   <thead>
                      <tr>
-                        <th class="desc">Company Info</th>
+                        <th class="desc">Infos société</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
-                           <div><strong>Address:</strong>  {{$setting['CompanyAdress']}}</div>
-                           <div><strong>Phone:</strong>  {{$setting['CompanyPhone']}}</div>
+                           <div><strong>ICE:</strong>  {{$setting['CompanyIce']}}</div>
+                           <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
+                           <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>
                         </td>
                      </tr>
@@ -68,11 +70,11 @@
             <table class="table-sm">
                <thead>
                   <tr>
-                     <th>PRODUCT</th>
-                     <th>UNIT COST</th>
-                     <th>QUANTITY</th>
-                     <th>DISCOUNT</th>
-                     <th>TAX</th>
+                     <th>PRODUIT</th>
+                     <th>PRIX UNITAIRE</th>
+                     <th>QUANTITE</th>
+                     <th>REMISE</th>
+                     <th>TAXE</th>
                      <th>TOTAL</th>
                   </tr>
                </thead>
@@ -98,15 +100,15 @@
          <div id="total">
             <table>
                <tr>
-                  <td>Order Tax</td>
+                  <td>Taxe de commande</td>
                   <td>{{$return_purchase['TaxNet']}} </td>
                </tr>
                <tr>
-                  <td>Discount</td>
+                  <td>Remise</td>
                   <td>{{$return_purchase['discount']}} </td>
                </tr>
                <tr>
-                  <td>Shipping</td>
+                  <td>Livraison</td>
                   <td>{{$return_purchase['shipping']}} </td>
                </tr>
                <tr>
@@ -115,12 +117,12 @@
                </tr>
 
                <tr>
-                  <td>Paid Amount</td>
+                  <td>Montant paiement</td>
                   <td>{{$symbol}} {{$return_purchase['paid_amount']}} </td>
                </tr>
 
                <tr>
-                  <td>Due</td>
+                  <td>Dû</td>
                   <td>{{$symbol}} {{$return_purchase['due']}} </td>
                </tr>
             </table>

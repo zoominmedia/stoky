@@ -276,9 +276,9 @@
                         :placeholder="$t('Choose_Status')"
                         :options="
                                 [
-                                  {label: 'completed', value: 'completed'},
-                                  {label: 'Pending', value: 'pending'},
-                                  {label: 'ordered', value: 'ordered'}
+                                  {label: $t('completed'), value: 'completed'},
+                                  {label: $t('Pending'), value: 'pending'},
+                                  {label: $t('Ordered'), value: 'ordered'}
                                 ]"
                       ></v-select>
                       <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>
@@ -297,9 +297,9 @@
                         :placeholder="$t('Choose_Status')"
                         :options="
                                 [
-                                  {label: 'Paid', value: 'paid'},
-                                  {label: 'partial', value: 'partial'},
-                                  {label: 'Pending', value: 'pending'},
+                                  {label: $t('Paid'), value: 'paid'},
+                                  {label: $t('partial'), value: 'partial'},
+                                  {label: $t('Pending'), value: 'pending'},
                                 ]"
                       ></v-select>
                     </b-form-group>
@@ -321,9 +321,9 @@
                                   {label: 'Cash', value: 'Cash'},
                                   {label: 'cheque', value: 'cheque'},
                                   {label: 'Western Union', value: 'Western Union'},
-                                  {label: 'bank transfer', value: 'bank transfer'},
+                                  {label: $t('bank_transfer'), value: 'bank transfer'},
                                   {label: 'credit card', value: 'credit card'},
-                                  {label: 'other', value: 'other'},
+                                  {label: $t('other'), value: 'other'},
                                   ]"
                       ></v-select>
                       <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

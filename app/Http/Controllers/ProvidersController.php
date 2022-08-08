@@ -26,8 +26,8 @@ class ProvidersController extends BaseController
         $dir = $request->SortType;
         $helpers = new helpers();
         // Filter fields With Params to retrieve
-        $columns = array(0 => 'name', 1 => 'code', 2 => 'phone', 3 => 'email');
-        $param = array(0 => 'like', 1 => 'like', 2 => 'like', 3 => 'like');
+        $columns = array(0 => 'name', 1 => 'ice', 2 => 'code', 3 => 'phone',4 => 'email');
+        $param = array(0 => 'like', 1 => 'like', 2 => 'like', 3 => 'like' , 4 => 'like');
         $data = array();
 
         $providers = Provider::where('deleted_at', '=', null);
@@ -67,7 +67,6 @@ class ProvidersController extends BaseController
         request()->validate([
             'name' => 'required',
             'email' => 'required',
-    
         ]);
         Provider::create([
             'name' => $request['name'],
@@ -103,6 +102,7 @@ class ProvidersController extends BaseController
 
         Provider::whereId($id)->update([
             'name' => $request['name'],
+            'ice' => $request['ice'],
             'adresse' => $request['adresse'],
             'phone' => $request['phone'],
             'email' => $request['email'],
@@ -194,6 +194,7 @@ class ProvidersController extends BaseController
             foreach ($data as $key => $value) {
                 Provider::create([
                     'name' => $value['name'] == '' ? null : $value['name'],
+                    'ice' => $value['ice'] == '' ? null : $value['ice'],
                     'code' => $this->getNumberOrder(),
                     'adresse' => $value['adresse'] == '' ? null : $value['adresse'],
                     'phone' => $value['phone'] == '' ? null : $value['phone'],

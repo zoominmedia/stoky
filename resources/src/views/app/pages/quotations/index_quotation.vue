@@ -25,8 +25,8 @@
         :pagination-options="{
           enabled: true,
           mode: 'records',
-          nextLabel: 'next',
-          prevLabel: 'prev',
+          nextLabel: $t('Next'),
+          prevLabel: $t('Prev'),
         }"
         :styleClass="showDropdown?'tableOne table-hover vgt-table full-height':'tableOne table-hover vgt-table non-height'"
       >
@@ -193,8 +193,8 @@
                 :placeholder="$t('Choose_Status')"
                 :options="
                       [
-                        {label: 'Sent', value: 'sent'},
-                        {label: 'Pending', value: 'pending'}
+                        {label: $t('Sent'), value: 'sent'},
+                        {label: $t('Pending'), value: 'pending'}
                       ]"
               ></v-select>
             </b-form-group>

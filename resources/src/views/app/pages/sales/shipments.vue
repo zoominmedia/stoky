@@ -111,11 +111,11 @@
                     :placeholder="$t('Choose_Status')"
                     :options="
                                 [
-                                  {label: 'Ordered', value: 'ordered'},
-                                  {label: 'Packed', value: 'packed'},
-                                  {label: 'Shipped', value: 'shipped'},
-                                  {label: 'Delivered', value: 'delivered'},
-                                  {label: 'Cancelled', value: 'cancelled'},
+                                  {label: $t('Ordered'), value: 'ordered'},
+                                  {label: $t('Packed'), value: 'packed'},
+                                  {label: $t('Shipped'), value: 'shipped'},
+                                  {label: $t('Delivered'), value: 'delivered'},
+                                  {label: $t('Cancelled'), value: 'cancelled'},
                                 ]"
                   ></v-select>
                   <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

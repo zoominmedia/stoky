@@ -108,6 +108,7 @@ class QuotationsController extends BaseController
             $item['statut'] = $Quotation->statut;
             $item['warehouse_name'] = $Quotation['warehouse']->name;
             $item['client_name'] = $Quotation['client']->name;
+            $item['client_ice'] = $Quotation['client']->ice;
             $item['client_email'] = $Quotation['client']->email;
             $item['GrandTotal'] = $Quotation->GrandTotal;
 
@@ -476,7 +477,9 @@ class QuotationsController extends BaseController
             ->where('deleted_at', '=', null)
             ->findOrFail($id);
 
+
         $quote['client_name'] = $Quotation['client']->name;
+        $quote['client_ice'] = $Quotation['client']->ice;
         $quote['client_phone'] = $Quotation['client']->phone;
         $quote['client_adr'] = $Quotation['client']->adresse;
         $quote['client_email'] = $Quotation['client']->email;
@@ -544,7 +547,6 @@ class QuotationsController extends BaseController
 
         $settings = Setting::where('deleted_at', '=', null)->first();
         $symbol = $helpers->Get_Currency_Code();
-
         $pdf = \PDF::loadView('pdf.quotation_pdf', [
             'symbol' => $symbol,
             'setting' => $settings,

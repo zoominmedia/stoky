@@ -273,8 +273,8 @@
                         :placeholder="$t('Choose_Status')"
                         :options="
                                 [
-                                  {label: 'Sent', value: 'sent'},
-                                  {label: 'Pending', value: 'pending'}
+                                  {label: $t('Sent'), value: 'sent'},
+                                  {label: $t('Pending'), value: 'pending'}
                                 ]"
                       ></v-select>
                       <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>
@@ -386,7 +386,7 @@
                     :options="
                            [
                             {label: 'Percent %', value: '1'},
-                            {label: 'Fixed', value: '2'}
+                            {label: $t('Fixed'), value: '2'}
                            ]"
                   ></v-select>
                   <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

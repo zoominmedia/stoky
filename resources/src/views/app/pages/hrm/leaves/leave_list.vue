@@ -25,8 +25,8 @@
         :pagination-options="{
         enabled: true,
         mode: 'records',
-        nextLabel: 'next',
-        prevLabel: 'prev',
+        nextLabel: $t('next'),
+        prevLabel: $t('prev'),
       }"
         styleClass="table-hover tableOne vgt-table"
       >
@@ -185,9 +185,9 @@
                         :placeholder="$t('Choose_status')"
                         :options="
                           [
-                            {label: 'Approved', value: 'approved'},
-                            {label: 'Pending', value: 'pending'},
-                            {label: 'Rejected', value: 'rejected'},
+                            {label: $t('Approved'), value: 'approved'},
+                            {label: $t('Pending'), value: 'pending'},
+                            {label: $t('Rejected'), value: 'rejected'},
                           ]"
                       ></v-select>
                       <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

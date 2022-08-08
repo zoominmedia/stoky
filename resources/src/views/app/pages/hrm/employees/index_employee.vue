@@ -25,8 +25,8 @@
         :pagination-options="{
         enabled: true,
         mode: 'records',
-        nextLabel: 'next',
-        prevLabel: 'prev',
+        nextLabel: $t('Next'),
+        prevLabel: $t('Prev'),
       }"
         styleClass="tableOne table-hover vgt-table"
       >

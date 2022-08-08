@@ -23,18 +23,18 @@
                <table class="table-sm">
                   <thead>
                      <tr>
-                        <th class="desc">Supplier Details</th>
+                        <th class="desc">Info fournisseur</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
                         <td>
-                           <div><strong>Name:</strong> {{$provider['provider_name']}}</div>
-                           <div><strong>Phone:</strong> {{$provider['phone']}}</div>
-                           <div><strong>Total Purchases:</strong> {{$provider['total_purchase']}}</div>
-                           <div><strong>Total Amount:</strong> {{$symbol}} {{$provider['total_amount']}}</div>
-                           <div><strong>Total Paid:</strong> {{$symbol}} {{$provider['total_paid']}}</div>
-                           <div><strong>Due:</strong> {{$symbol}} {{$provider['due']}}</div>
+                           <div><strong>Nom:</strong> {{$provider['provider_name']}}</div>
+                           <div><strong>Téle:</strong> {{$provider['phone']}}</div>
+                           <div><strong>Total des achats:</strong> {{$provider['total_purchase']}}</div>
+                           <div><strong>Montant total:</strong> {{$symbol}} {{$provider['total_amount']}}</div>
+                           <div><strong>Total payé:</strong> {{$symbol}} {{$provider['total_paid']}}</div>
+                           <div><strong>Dû:</strong> {{$symbol}} {{$provider['due']}}</div>
                         </td>
                      </tr>
                   </tbody>
@@ -44,15 +44,15 @@
                <table class="table-sm">
                   <thead>
                      <tr>
-                        <th class="desc">Company Info</th>
+                        <th class="desc">Infos société</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
-                           <div><strong>Address:</strong>  {{$setting['CompanyAdress']}}</div>
-                           <div><strong>Phone:</strong>  {{$setting['CompanyPhone']}}</div>
+                           <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
+                           <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>
                         </td>
                      </tr>
@@ -62,16 +62,16 @@
          </div>
          <div id="details_inv">
             <h3 style="margin-bottom:10px">
-                  All Purchases ( Unpaid/Partial )
+                  Tous les achats ( Non payé/Partiel )
             </h3>
             <table  class="table-sm">
                <thead>
                   <tr>
                      <th>DATE</th>
                      <th>REF</th>
-                     <th>PAID</th>
-                     <th>DUE</th>
-                     <th>PAYMENT STATUS</th>
+                     <th>PAYE</th>
+                     <th>DÛ</th>
+                     <th>ETAT DE PAIEMENT</th>
                   </tr>
                </thead>
                <tbody>

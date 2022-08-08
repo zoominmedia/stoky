@@ -460,7 +460,7 @@
                             :options="
                               [
                                 {label: 'Percent %', value: '1'},
-                                {label: 'Fixed', value: '2'}
+                                {label: $t('Fixed'), value: '2'}
                               ]"
                           ></v-select>
                           <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>
@@ -953,11 +953,11 @@
                             :options="
                               [
                               {label: 'Cash', value: 'Cash'},
-                              {label: 'credit card', value: 'credit card'},
                               {label: 'cheque', value: 'cheque'},
                               {label: 'Western Union', value: 'Western Union'},
-                              {label: 'bank transfer', value: 'bank transfer'},
-                              {label: 'other', value: 'other'},
+                              {label: $t('bank_transfer'), value: 'bank transfer'},
+                              {label: 'credit card', value: 'credit card'},
+                              {label: $t('other'), value: 'other'},
                               ]"
                           ></v-select>
                           <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

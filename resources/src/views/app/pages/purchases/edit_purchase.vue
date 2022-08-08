@@ -278,9 +278,9 @@
                         :placeholder="$t('Choose_Status')"
                         :options="
                             [
-                              {label: 'received', value: 'received'},
-                              {label: 'pending', value: 'pending'},
-                               {label: 'ordered', value: 'ordered'}
+                              {label: $t('Received'), value: 'received'},
+                              {label: $t('Pending'), value: 'pending'},
+                              {label: $t('Ordered'), value: 'ordered'}
                             ]"
                       ></v-select>
                       <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

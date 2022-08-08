@@ -8,7 +8,7 @@ class Setting extends Model
 {
 
     protected $fillable = [
-        'currency_id', 'email', 'CompanyName', 'CompanyPhone', 'CompanyAdress',
+        'currency_id', 'email', 'CompanyName','CompanyIce', 'CompanyPhone', 'CompanyAdress',
          'logo','footer','developed_by','client_id','warehouse_id','default_language',
          'is_invoice_footer','invoice_footer',
     ];

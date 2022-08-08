@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>Quotation _{{$quote['Ref']}}</title>
+      <title>Devis _{{$quote['Ref']}}</title>
       <link rel="stylesheet" href="{{asset('/css/pdf_style.css')}}" media="all" />
    </head>
 
@@ -13,11 +13,11 @@
          </div>
          <div id="company">
             <div><strong> Date: </strong>{{$quote['date']}}</div>
-            <div><strong> Number: </strong> {{$quote['Ref']}}</div>
-            <div><strong> Status: </strong> {{$quote['statut']}}</div>
+            <div><strong> Numéro: </strong> {{$quote['Ref']}}</div>
+            <div><strong> Etat: </strong> {{$quote['statut']}}</div>
          </div>
          <div id="Title-heading">
-            Quotation  : {{$quote['Ref']}}
+            Devis  : {{$quote['Ref']}}
          </div>
          </div>
       </header>
@@ -27,16 +27,17 @@
                <table class="table-sm">
                   <thead>
                      <tr>
-                        <th class="desc">Customer Info</th>
+                        <th class="desc">Infos client</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
                         <td>
-                           <div><strong>Name:</strong> {{$quote['client_name']}}</div>
-                           <div><strong>Phone:</strong> {{$quote['client_phone']}}</div>
-                           <div><strong>Address:</strong>   {{$quote['client_adr']}}</div>
-                           <div><strong>Email:</strong>  {{$quote['client_email']}}</div>
+                           <div><strong>Nom :</strong> {{$quote['client_name']}}</div>
+                           <div><strong>ICE :</strong> {{$quote['client_ice']}}</div>
+                           <div><strong>Téle :</strong> {{$quote['client_phone']}}</div>
+                           <div><strong>Adresse</strong>   {{$quote['client_adr']}}</div>
+                           <div><strong>Email :</strong>  {{$quote['client_email']}}</div>
                         </td>
                      </tr>
                   </tbody>
@@ -46,15 +47,16 @@
                <table  class="table-sm">
                   <thead>
                      <tr>
-                        <th class="desc">Company Info</th>
+                        <th class="desc">Infos société</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
-                           <div><strong>Address:</strong>  {{$setting['CompanyAdress']}}</div>
-                           <div><strong>Phone:</strong>  {{$setting['CompanyPhone']}}</div>
+                           <div><strong>ICE:</strong>  {{$setting['CompanyIce']}}</div>
+                           <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
+                           <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>
                         </td>
                      </tr>
@@ -66,11 +68,11 @@
             <table class="table-sm">
                <thead>
                   <tr>
-                     <th>PRODUCT</th>
-                     <th>UNIT PRICE</th>
-                     <th>QUANTITY</th>
-                     <th>DISCOUNT</th>
-                     <th>TAX</th>
+                     <th>PODUIT</th>
+                     <th>PRIX UNITAIRE</th>
+                     <th>QUANTITE</th>
+                     <th>REMISE</th>
+                     <th>TAXE</th>
                      <th>TOTAL</th>
                   </tr>
                </thead>
@@ -96,15 +98,15 @@
          <div id="total">
             <table>
                <tr>
-                  <td>Order Tax</td>
+                  <td>Taxe de commande</td>
                   <td>{{$quote['TaxNet']}} </td>
                </tr>
                <tr>
-                  <td>Discount</td>
+                  <td>Remise</td>
                   <td>{{$quote['discount']}} </td>
                </tr>
                <tr>
-                  <td>Shipping</td>
+                  <td>Livraison</td>
                   <td>{{$quote['shipping']}} </td>
                </tr>
                <tr>

@@ -27,8 +27,8 @@
         :pagination-options="{
         enabled: true,
         mode: 'records',
-        nextLabel: 'next',
-        prevLabel: 'prev',
+        nextLabel: $t('Next'),
+        prevLabel: $t('Prev'),
       }"
         styleClass="mt-5 table-hover tableOne vgt-table"
       >

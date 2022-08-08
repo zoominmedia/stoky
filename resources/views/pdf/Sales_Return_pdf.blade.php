@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>Return _{{$return_sale['Ref']}}</title>
+      <title>Retour _{{$return_sale['Ref']}}</title>
       <link rel="stylesheet" href="{{asset('/css/pdf_style.css')}}" media="all" />
    </head>
 
@@ -13,14 +13,14 @@
          </div>
          <div id="company">
             <div><strong> Date: </strong>{{$return_sale['date']}}</div>
-            <div><strong> Number: </strong> {{$return_sale['Ref']}}</div>
-            <div><strong> Sale Ref: </strong> {{$return_sale['sale_ref']}}</div>
-            <div><strong> Status: </strong> {{$return_sale['statut']}}</div>
-            <div><strong> Payment Status: </strong> {{$return_sale['payment_status']}}</div>
+            <div><strong> Numéro: </strong> {{$return_sale['Ref']}}</div>
+            <div><strong> Réf vente: </strong> {{$return_sale['sale_ref']}}</div>
+            <div><strong> Etat: </strong> {{$return_sale['statut']}}</div>
+            <div><strong> Etat de Paiement: </strong> {{$return_sale['payment_status']}}</div>
 
          </div>
          <div id="Title-heading">
-            Return  : {{$return_sale['Ref']}}
+            Retour  : {{$return_sale['Ref']}}
          </div>
          </div>
       </header>
@@ -36,9 +36,9 @@
                   <tbody>
                      <tr>
                         <td>
-                           <div><strong>Name:</strong> {{$return_sale['client_name']}}</div>
-                           <div><strong>Phone:</strong> {{$return_sale['client_phone']}}</div>
-                           <div><strong>Address:</strong>   {{$return_sale['client_adr']}}</div>
+                           <div><strong>Nom:</strong> {{$return_sale['client_name']}}</div>
+                           <div><strong>Téle:</strong> {{$return_sale['client_phone']}}</div>
+                           <div><strong>Adresse:</strong>   {{$return_sale['client_adr']}}</div>
                            <div><strong>Email:</strong>  {{$return_sale['client_email']}}</div>
                         </td>
                      </tr>
@@ -56,8 +56,8 @@
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
-                           <div><strong>Address:</strong>  {{$setting['CompanyAdress']}}</div>
-                           <div><strong>Phone:</strong>  {{$setting['CompanyPhone']}}</div>
+                           <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
+                           <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>
                         </td>
                      </tr>
@@ -69,11 +69,11 @@
             <table class="table-sm">
                <thead>
                   <tr>
-                     <th>PRODUCT</th>
-                     <th>UNIT PRICE</th>
-                     <th>QUANTITY</th>
-                     <th>DISCOUNT</th>
-                     <th>TAX</th>
+                     <th>PRODUIT</th>
+                     <th>PRIX UNITAIRE</th>
+                     <th>QUANTITE</th>
+                     <th>REMISE</th>
+                     <th>TAXE</th>
                      <th>TOTAL</th>
                   </tr>
                </thead>
@@ -99,15 +99,15 @@
          <div id="total">
             <table>
                <tr>
-                  <td>Order Tax</td>
+                  <td>Taxe de commande</td>
                   <td>{{$return_sale['TaxNet']}} </td>
                </tr>
                <tr>
-                  <td>Discount</td>
+                  <td>Remise</td>
                   <td>{{$return_sale['discount']}} </td>
                </tr>
                <tr>
-                  <td>Shipping</td>
+                  <td>Livraison</td>
                   <td>{{$return_sale['shipping']}} </td>
                </tr>
                <tr>
@@ -116,12 +116,12 @@
                </tr>
 
                <tr>
-                  <td>Paid Amount</td>
+                  <td>Montant payé</td>
                   <td>{{$symbol}} {{$return_sale['paid_amount']}} </td>
                </tr>
 
                <tr>
-                  <td>Due</td>
+                  <td>Dû</td>
                   <td>{{$symbol}} {{$return_sale['due']}} </td>
                </tr>
             </table>

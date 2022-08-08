@@ -61,8 +61,8 @@
                         :placeholder="$t('Choose_Gender')"
                         :options="
                            [
-                            {label: 'Male', value: 'male'},
-                            {label: 'Female', value: 'female'}
+                            {label: $t('Male'), value: 'male'},
+                            {label: $t('Female'), value: 'female'}
                            ]"
                       ></v-select>
                       <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

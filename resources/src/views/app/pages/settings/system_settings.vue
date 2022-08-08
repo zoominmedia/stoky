@@ -23,6 +23,28 @@
                     </b-form-group>
                   </b-col>
 
+
+                    <!-- ICE  -->
+                  <b-col lg="4" md="4" sm="12">
+                    <validation-provider
+                      name="Ice"
+                      :rules="{ required: true}"
+                      v-slot="validationContext"
+                    >
+                      <b-form-group :label="'ICE' + ' ' + '*'">
+                        <b-form-input
+                          :state="getValidationState(validationContext)"      
+                          label="ice"
+                          :placeholder="ICE"
+                          v-model="setting.ice"
+                        ></b-form-input>
+                        <b-form-invalid-feedback
+                          id="Email-feedback"
+                        >{{ validationContext.errors[0] }}</b-form-invalid-feedback>
+                      </b-form-group>
+                    </validation-provider>
+                  </b-col>
+
                   <!-- Email  -->
                   <b-col lg="4" md="4" sm="12">
                     <validation-provider
@@ -421,6 +443,7 @@ export default {
       self.data.append("warehouse", self.setting.warehouse_id);
       self.data.append("currency", self.setting.currency_id);
       self.data.append("email", self.setting.email);
+      self.data.append("CompanyIce", self.setting.ice);
       self.data.append("logo", self.setting.logo);
       self.data.append("CompanyName", self.setting.CompanyName);
       self.data.append("CompanyPhone", self.setting.CompanyPhone);

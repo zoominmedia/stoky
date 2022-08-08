@@ -82,6 +82,7 @@ class SettingsController extends Controller
             'client_id' => $client,
             'warehouse_id' => $warehouse,
             'email' => $request['email'],
+            'CompanyIce' => $request['CompanyIce'],
             'default_language' =>  $default_language,
             'CompanyName' => $request['CompanyName'],
             'CompanyPhone' => $request['CompanyPhone'],

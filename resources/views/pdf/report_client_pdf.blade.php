@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -29,12 +30,12 @@
                   <tbody>
                      <tr>
                         <td>
-                           <div><strong>Name:</strong> {{$client['client_name']}}</div>
-                           <div><strong>Phone:</strong> {{$client['phone']}}</div>
-                           <div><strong>Total Sales:</strong> {{$client['total_sales']}}</div>
-                           <div><strong>Total Amount:</strong> {{$symbol}} {{$client['total_amount']}}</div>
-                           <div><strong>Total Paid:</strong> {{$symbol}} {{$client['total_paid']}}</div>
-                           <div><strong>Due:</strong> {{$symbol}} {{$client['due']}}</div>
+                           <div><strong>Nom:</strong> {{$client['client_name']}}</div>
+                           <div><strong>Téle:</strong> {{$client['phone']}}</div>
+                           <div><strong>Ventes totales:</strong> {{$client['total_sales']}}</div>
+                           <div><strong>Monatnt total:</strong> {{$symbol}} {{$client['total_amount']}}</div>
+                           <div><strong>Total payé:</strong> {{$symbol}} {{$client['total_paid']}}</div>
+                           <div><strong>Dû:</strong> {{$symbol}} {{$client['due']}}</div>
                         </td>
                      </tr>
                   </tbody>
@@ -44,15 +45,15 @@
                <table class="table-sm">
                   <thead>
                      <tr>
-                        <th class="desc">Company Info</th>
+                        <th class="desc">Infos société</th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
-                           <div><strong>Address:</strong>  {{$setting['CompanyAdress']}}</div>
-                           <div><strong>Phone:</strong>  {{$setting['CompanyPhone']}}</div>
+                           <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
+                           <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>
                         </td>
                      </tr>
@@ -62,16 +63,16 @@
          </div>
          <div id="details_inv">
             <h3 style="margin-bottom:10px">
-                  All Sales ( Unpaid/Partial )
+            Toutes les ventes ( Non payé/Partiel )
             </h3>
             <table  class="table-sm">
                <thead>
                   <tr>
                      <th>DATE</th>
                      <th>REF</th>
-                     <th>PAID</th>
-                     <th>DUE</th>
-                     <th>PAYMENT STATUS</th>
+                     <th>PAYE</th>
+                     <th>DÛ</th>
+                     <th>ETAT DE PAIEMENT</th>
                   </tr>
                </thead>
                <tbody>

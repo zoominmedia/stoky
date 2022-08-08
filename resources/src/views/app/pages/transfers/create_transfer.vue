@@ -277,9 +277,9 @@
                         :reduce="label => label.value"
                         :placeholder="$t('Choose_Status')"
                         :options="
-                                [{label: 'Completed', value: 'completed'},
-                                {label: 'Sent', value: 'sent'},
-                                {label: 'Pending', value: 'pending'}
+                                [{label: $t('completed'), value: 'completed'},
+                                {label: $t('Sent'), value: 'sent'},
+                                {label: $t('Pending'), value: 'pending'}
                             ]"
                       ></v-select>
                       <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

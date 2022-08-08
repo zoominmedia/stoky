@@ -24,6 +24,7 @@ class SettingSeeder extends Seeder
                 'invoice_footer' => Null,
                 'warehouse_id' => Null,
                 'CompanyName' => 'Stocky',
+                'CompanyIce' => '12345698712',
                 'CompanyPhone' => '6315996770',
                 'CompanyAdress' => '3618 Abia Martin Drive',
                 'footer' => 'Stocky - Ultimate Inventory With POS',

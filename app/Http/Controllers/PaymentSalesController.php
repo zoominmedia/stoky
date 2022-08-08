@@ -463,6 +463,7 @@ class PaymentSalesController extends BaseController
 
         $payment_data['sale_Ref'] = $payment['sale']->Ref;
         $payment_data['client_name'] = $payment['sale']['client']->name;
+        $payment_data['client_ice'] = $payment['sale']['client']->ice;
         $payment_data['client_phone'] = $payment['sale']['client']->phone;
         $payment_data['client_adr'] = $payment['sale']['client']->adresse;
         $payment_data['client_email'] = $payment['sale']['client']->email;

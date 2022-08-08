@@ -25,8 +25,8 @@
         :pagination-options="{
         enabled: true,
         mode: 'records',
-        nextLabel: 'next',
-        prevLabel: 'prev',
+        nextLabel: $t('Next'),
+        prevLabel: $t('Prev'),
       }"
         styleClass="tableOne table-hover vgt-table"
       >
@@ -144,9 +144,9 @@
                 :placeholder="$t('Choose_Status')"
                 :options="
                       [
-                        {label: 'Completed', value: 'completed'},
-                        {label: 'Sent', value: 'sent'},
-                        {label: 'Pending', value: 'pending'},
+                        {label: $t('completed'), value: 'completed'},
+                        {label: $t('Sent'), value: 'sent'},
+                        {label: $t('Pending'), value: 'pending'}
                       ]"
               ></v-select>
             </b-form-group>

@@ -86,14 +86,14 @@
                 :placeholder="$t('Paper_size')"
                 :options="
                       [
-                        {label: '40 per sheet (a4) (1.799 * 1.003)', value: 'style40'},
-                        {label: '30 per sheet (2.625 * 1)', value: 'style30'},
-                        {label: '24 per sheet (a4) (2.48 * 1.334)', value: 'style24'},
-                        {label: '20 per sheet (4 * 1)', value: 'style20'},
-                        {label: '18 per sheet (a4) (2.5 * 1.835)', value: 'style18'},
-                        {label: '14 per sheet (4 * 1.33)', value: 'style14'},
-                        {label: '12 per sheet (a4) (2.5 * 2.834)', value: 'style12'},
-                        {label: '10 per sheet (4 * 2)', value: 'style10'},
+                        {label: '40 Per Sheet (a4) (1.799 * 1.003)', value: 'style40'},
+                        {label: '30 Per Sheet (2.625 * 1)', value: 'style30'},
+                        {label: '24 Per Sheet (a4) (2.48 * 1.334)', value: 'style24'},
+                        {label: '20 Per Sheet (4 * 1)', value: 'style20'},
+                        {label: '18 Per Sheet (a4) (2.5 * 1.835)', value: 'style18'},
+                        {label: '14 Per Sheet (4 * 1.33)', value: 'style14'},
+                        {label: '12 Per Sheet (a4) (2.5 * 2.834)', value: 'style12'},
+                        {label: '10 Per Sheet (4 * 2)', value: 'style10'},
                       ]"
               ></v-select>
             </b-form-group>

@@ -782,6 +782,7 @@ class PurchasesReturnController extends BaseController
 
         $return_details['purchase_ref'] = $PurchaseReturn['purchase']?$PurchaseReturn['purchase']->Ref:'---';
         $return_details['supplier_name'] = $PurchaseReturn['provider']->name;
+        $return_details['supplier_ice'] = $PurchaseReturn['provider']->ice;
         $return_details['supplier_phone'] = $PurchaseReturn['provider']->phone;
         $return_details['supplier_adr'] = $PurchaseReturn['provider']->adresse;
         $return_details['supplier_email'] = $PurchaseReturn['provider']->email;

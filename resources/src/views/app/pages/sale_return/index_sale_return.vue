@@ -25,8 +25,8 @@
         :pagination-options="{
         enabled: true,
         mode: 'records',
-        nextLabel: 'next',
-        prevLabel: 'prev',
+        nextLabel: $t('Next'),
+        prevLabel: $t('Prev'),
       }"
         :styleClass="showDropdown?'tableOne table-hover vgt-table full-height':'tableOne table-hover vgt-table non-height'"
       >
@@ -232,9 +232,9 @@
                 :placeholder="$t('Choose_Status')"
                 :options="
                       [
-                        {label: 'completed', value: 'completed'},
-                        {label: 'Pending', value: 'pending'},
-                        {label: 'Ordered', value: 'ordered'},
+                        {label: $t('completed'), value: 'completed'},
+                        {label: $t('Pending'), value: 'pending'},
+                        {label: $t('Ordered'), value: 'ordered'},
                       ]"
               ></v-select>
             </b-form-group>
@@ -249,9 +249,9 @@
                 :placeholder="$t('Choose_Status')"
                 :options="
                       [
-                        {label: 'Paid', value: 'paid'},
-                        {label: 'partial', value: 'partial'},
-                        {label: 'UnPaid', value: 'unpaid'},
+                        {label: $t('Paid'), value: 'paid'},
+                        {label: $t('partial'), value: 'partial'},
+                        {label: $t('Unpaid'), value: 'unpaid'},
                       ]"
               ></v-select>
             </b-form-group>
@@ -409,8 +409,8 @@
                           {label: 'credit card', value: 'credit card'},
                           {label: 'cheque', value: 'cheque'},
                           {label: 'Western Union', value: 'Western Union'},
-                          {label: 'bank transfer', value: 'bank transfer'},
-                          {label: 'other', value: 'other'},
+                          {label: $t('bank_transfer'), value: 'bank transfer'},
+                          {label: $t('other'), value: 'other'},
                           ]"
                   ></v-select>
                   <b-form-invalid-feedback>{{ errors[0] }}</b-form-invalid-feedback>

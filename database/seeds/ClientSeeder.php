@@ -18,6 +18,7 @@ class ClientSeeder extends Seeder
             array(
                 'id'     => 1,
                 'name'   => 'walk-in-customer',
+                'ice'   => '256945865232568',
                 'code' => 1,
                 'email' => 'walk-in-customer@example.com',
                 'country' => 'bangladesh',
