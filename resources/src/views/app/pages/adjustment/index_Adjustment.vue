@@ -281,13 +281,13 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Reference", dataKey: "Ref" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Total Products", dataKey: "items" }
+        { title: "Référence", dataKey: "Ref" },
+        { title: "Entrepot", dataKey: "warehouse_name" },
+        { title: "Total des produits", dataKey: "items" }
       ];
       pdf.autoTable(columns, self.adjustments);
-      pdf.text("Adjustment List", 40, 25);
-      pdf.save("Adjustment_List.pdf");
+      pdf.text("Liste des ajustements", 40, 25);
+      pdf.save("List_Adjustment.pdf");
     },
 
     //---------------Get Details Adjustement ----------------------\\

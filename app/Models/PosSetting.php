@@ -8,7 +8,7 @@ class PosSetting extends Model
 {
 
     protected $fillable = [
-        'note_customer', 'show_note', 'show_barcode', 'show_discount', 'show_customer',
+        'note_customer', 'show_note','show_ice', 'show_barcode', 'show_discount', 'show_customer',
          'show_email','show_phone','show_address',
     ];
 

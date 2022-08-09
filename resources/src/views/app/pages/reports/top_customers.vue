@@ -115,14 +115,14 @@ export default {
       var self = this;
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "Customer Name", dataKey: "name" },
-        { title: "Phone", dataKey: "phone" },
+        { title: "Nom Client", dataKey: "name" },
+        { title: "téle", dataKey: "phone" },
         { title: "Email", dataKey: "email" },
-        { title: "Total Sales", dataKey: "total_sales" },
-        { title: "Total Amount", dataKey: "total" },
+        { title: "Total des ventes", dataKey: "total_sales" },
+        { title: "Montant Total", dataKey: "total" },
       ];
       pdf.autoTable(columns, self.customers);
-      pdf.text("Top Customers", 40, 25);
+      pdf.text("Meilleurs Clients", 40, 25);
       pdf.save("Top_Customers.pdf");
     },
 

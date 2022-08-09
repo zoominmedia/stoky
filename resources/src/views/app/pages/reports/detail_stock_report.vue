@@ -705,16 +705,16 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
-        { title: "Product Name", dataKey: "product_name" },
+        { title: "Réf", dataKey: "Ref" },
+        { title: "Nom de produit", dataKey: "product_name" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Quantity", dataKey: "quantity" },
-        { title: "SubTotal", dataKey: "total" },
+        { title: "Entreport", dataKey: "warehouse_name" },
+        { title: "Quantité", dataKey: "quantity" },
+        { title: "Total", dataKey: "total" },
       ];
       pdf.autoTable(columns, self.sales);
-      pdf.text("Sale List", 40, 25);
-      pdf.save("Sale_List.pdf");
+      pdf.text("Liste des ventes", 40, 25);
+      pdf.save("List_ventes.pdf");
     },
 
       //------------------------------------- Quotations PDF -------------------------\\
@@ -724,12 +724,12 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
-        { title: "Product Name", dataKey: "product_name" },
+        { title: "Réf", dataKey: "Ref" },
+        { title: "Nom de produit", dataKey: "product_name" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Quantity", dataKey: "quantity" },
-        { title: "SubTotal", dataKey: "total" },
+        { title: "Magazin", dataKey: "warehouse_name" },
+        { title: "Quantité", dataKey: "quantity" },
+        { title: "Total", dataKey: "total" },
       ];
       pdf.autoTable(columns, self.quotations);
       pdf.text("Quotation List", 40, 25);

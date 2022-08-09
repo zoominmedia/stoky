@@ -349,14 +349,14 @@ components: { DateRangePicker },
       let columns = [
         { title: "Ref", dataKey: "Ref" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Status", dataKey: "statut" },
+        { title: "Etat", dataKey: "statut" },
         { title: "Total", dataKey: "GrandTotal" },
-        { title: "Paid", dataKey: "paid_amount" },
-        { title: "Due", dataKey: "due" },
-        { title: "Status Payment", dataKey: "payment_status" }
+        { title: "Payé", dataKey: "paid_amount" },
+        { title: "Dû", dataKey: "due" },
+        { title: "Etat de paiement", dataKey: "payment_status" }
       ];
       pdf.autoTable(columns, self.sales);
-      pdf.text("Sales report", 40, 25);
+      pdf.text("Rapport des ventes", 40, 25);
       pdf.save("Sales_report.pdf");
     },
 

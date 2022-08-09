@@ -414,15 +414,15 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
+        { title: "Réf", dataKey: "Ref" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Status", dataKey: "statut" },
+        { title: "Entrepot", dataKey: "warehouse_name" },
+        { title: "Etat", dataKey: "statut" },
         { title: "Total", dataKey: "GrandTotal" }
       ];
       pdf.autoTable(columns, self.quotations);
-      pdf.text("Quotation List", 40, 25);
-      pdf.save("Quotation_List.pdf");
+      pdf.text("Liste des devis", 40, 25);
+      pdf.save("List_Devis.pdf");
     },
 
      //----------------------------------- Quotation PDF by id -------------------------\\

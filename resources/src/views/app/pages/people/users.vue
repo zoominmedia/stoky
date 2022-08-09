@@ -602,15 +602,15 @@ export default {
 
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "First Name", dataKey: "firstname" },
-        { title: "Last Name", dataKey: "lastname" },
-        { title: "Username", dataKey: "username" },
+        { title: "Prénom", dataKey: "firstname" },
+        { title: "Nom", dataKey: "lastname" },
+        { title: "Nom d'utilisateur", dataKey: "username" },
         { title: "Email", dataKey: "email" },
-        { title: "Phone", dataKey: "phone" }
+        { title: "Téle", dataKey: "phone" }
       ];
       pdf.autoTable(columns, self.users);
-      pdf.text("User List", 40, 25);
-      pdf.save("User_List.pdf");
+      pdf.text("Liste utilisateurs", 40, 25);
+      pdf.save("List_Utilisateur.pdf");
     },
 
 

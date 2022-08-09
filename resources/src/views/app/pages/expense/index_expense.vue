@@ -249,14 +249,14 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Reference", dataKey: "Ref" },
-        { title: "Amount", dataKey: "amount" },
-        { title: "Category", dataKey: "category_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" }
+        { title: "Référence", dataKey: "Ref" },
+        { title: "Montant", dataKey: "amount" },
+        { title: "Catégorie", dataKey: "category_name" },
+        { title: "Entrepot", dataKey: "warehouse_name" }
       ];
       pdf.autoTable(columns, self.expenses);
-      pdf.text("Expense List", 40, 25);
-      pdf.save("Expense_List.pdf");
+      pdf.text("Liste de dépenses", 40, 25);
+      pdf.save("List_Depense.pdf");
     },
 
     //------ update Params Table

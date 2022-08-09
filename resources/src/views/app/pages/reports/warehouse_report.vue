@@ -835,10 +835,10 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
+        { title: "Réf", dataKey: "Ref" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Status", dataKey: "statut" },
+        { title: "Magazin", dataKey: "warehouse_name" },
+        { title: "état", dataKey: "statut" },
         { title: "Total", dataKey: "GrandTotal" }
       ];
       pdf.autoTable(columns, self.quotations);

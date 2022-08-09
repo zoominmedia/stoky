@@ -178,7 +178,7 @@
             
              <!-- Customer Ice -->
             <b-col md="6" sm="12">
-                <b-form-group :label="$t('CustomerIce')">
+                <b-form-group :label="$t('CustomerIce') +' ' + '*'">
                   <b-form-input
                     label="ice"
                     v-model="provider.ice"
@@ -676,17 +676,16 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Code", dataKey: "code" },
-        { title: "ice", dataKey: "ice" },
-        { title: "Name", dataKey: "name" },
-        { title: "Ice", dataKey: "ice" },
-        { title: "Phone", dataKey: "phone" },
+        { title: "ICE", dataKey: "ice" },
+        { title: "Nom", dataKey: "name" },
+        { title: "Télé", dataKey: "phone" },
         { title: "Email", dataKey: "email" },
-        { title: "Country", dataKey: "country" },
-        { title: "City", dataKey: "city" }
+        { title: "Pays", dataKey: "country" },
+        { title: "Ville", dataKey: "city" }
       ];
       pdf.autoTable(columns, self.providers);
-      pdf.text("Provider List", 40, 25);
-      pdf.save("Provider_List.pdf");
+      pdf.text(" Liste de Fournisseurs", 40, 25);
+      pdf.save("liste de fournisseur.pdf");
     },
 
     //------------------------------ Show Modal (create Provider) -------------------------------\\

@@ -882,19 +882,19 @@ export default {
 
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "Ref", dataKey: "Ref" },
-        { title: "Provider", dataKey: "provider_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Purchase", dataKey: "purchase_ref" },
-        { title: "Status", dataKey: "statut" },
+        { title: "Réf", dataKey: "Ref" },
+        { title: "Fournisseur", dataKey: "provider_name" },
+        { title: "Magasin", dataKey: "warehouse_name" },
+        { title: "Achat", dataKey: "purchase_ref" },
+        { title: "état", dataKey: "statut" },
         { title: "Total", dataKey: "GrandTotal" },
-        { title: "Paid", dataKey: "paid_amount" },
-        { title: "Due", dataKey: "due" },
-        { title: "Status Payment", dataKey: "payment_status" }
+        { title: "Payé", dataKey: "paid_amount" },
+        { title: "Du", dataKey: "due" },
+        { title: "état de paiement", dataKey: "payment_status" }
       ];
       pdf.autoTable(columns, self.purchase_returns);
-      pdf.text("Purchase Returns", 40, 25);
-      pdf.save("purchase_returns.pdf");
+      pdf.text("Liste des retours", 40, 25);
+      pdf.save("liste_des_retours.pdf");
     },
 
     Number_Order_Payment() {

@@ -3445,6 +3445,7 @@ class ReportController extends BaseController
         }
 
         $data['client_name'] = $client->name;
+        $data['client_ice'] = $client->ice;
         $data['phone'] = $client->phone;
 
         $data['total_sales'] = DB::table('sales')->where('deleted_at', '=', null)->where('client_id', $id)->count();
@@ -3506,6 +3507,7 @@ class ReportController extends BaseController
          }
  
          $data['provider_name'] = $provider->name;
+         $data['provider_ice'] = $provider->ice;
          $data['phone'] = $provider->phone;
  
         $data['total_purchase'] = DB::table('purchases')->where('deleted_at', '=', null)->where('provider_id', $id)->count();

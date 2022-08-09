@@ -813,17 +813,17 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Code", dataKey: "code" },
-        { title: "Name", dataKey: "name" },
+        { title: "Nom", dataKey: "name" },
         { title: "ICE", dataKey: "ice" },
-        { title: "Phone", dataKey: "phone" },
+        { title: "Télé", dataKey: "phone" },
         { title: "Email", dataKey: "email" },
-        { title: "Country", dataKey: "country" },
-        { title: "City", dataKey: "city" },
-        { title: "Due", dataKey: "due" },
+        { title: "Pays", dataKey: "country" },
+        { title: "Ville", dataKey: "city" },
+        { title: "Dû", dataKey: "due" },
       ];
       pdf.autoTable(columns, self.clients);
-      pdf.text("Customer List", 40, 25);
-      pdf.save("Customer_List.pdf");
+      pdf.text("liste de clients", 40, 25);
+      pdf.save("liste de clients.pdf");
     },
 
 

@@ -267,17 +267,17 @@ export default {
 
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "First Name", dataKey: "firstname" },
-        { title: "Last Name", dataKey: "lastname" },
-        { title: "Phone", dataKey: "phone" },
-        { title: "Company", dataKey: "company_name" },
-        { title: "Department", dataKey: "department_name" },
-        { title: "Designation", dataKey: "designation_name" },
-        { title: "Office shift", dataKey: "office_shift_name" }
+        { title: "Prénom", dataKey: "firstname" },
+        { title: "Nom", dataKey: "lastname" },
+        { title: "Téle", dataKey: "phone" },
+        { title: "Companie", dataKey: "company_name" },
+        { title: "Départment", dataKey: "department_name" },
+        { title: "Désignation", dataKey: "designation_name" },
+        { title: "Quart de bureau", dataKey: "office_shift_name" }
       ];
       pdf.autoTable(columns, self.employees);
-      pdf.text("Employee List", 40, 25);
-      pdf.save("Employee_List.pdf");
+      pdf.text("Liste des employés", 40, 25);
+      pdf.save("List_employe.pdf");
     },
 
 

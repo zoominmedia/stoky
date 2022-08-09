@@ -758,6 +758,7 @@ class SalesController extends BaseController
         $sale_details['tax_rate'] = $sale_data->tax_rate;
         $sale_details['TaxNet'] = $sale_data->TaxNet;
         $sale_details['client_name'] = $sale_data['client']->name;
+        $sale_details['client_ice'] = $sale_data['client']->ice;
         $sale_details['client_phone'] = $sale_data['client']->phone;
         $sale_details['client_adr'] = $sale_data['client']->adresse;
         $sale_details['client_email'] = $sale_data['client']->email;
@@ -967,6 +968,7 @@ class SalesController extends BaseController
             ->findOrFail($id);
 
         $sale['client_name'] = $sale_data['client']->name;
+        $sale['client_ice'] = $sale_data['client']->ice;
         $sale['client_phone'] = $sale_data['client']->phone;
         $sale['client_adr'] = $sale_data['client']->adresse;
         $sale['client_email'] = $sale_data['client']->email;

@@ -221,7 +221,7 @@ export default {
     dashboard: 'Tableau de bord',
     Products: 'Produits',
     productsList: 'Liste de produits',
-    StockTransfers: 'Stock Transfers',
+    StockTransfers: 'Transfert de stock',
     Customers: 'Clients',
     Suppliers: 'Fournisseurs',
     Quotations: 'Devis',

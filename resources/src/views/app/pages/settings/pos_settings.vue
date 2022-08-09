@@ -35,6 +35,15 @@
                   </b-col>
 
                  
+                   <!-- Show Phone-->
+                    <b-col md="4" class="mt-3 mb-3">
+                       <label class="switch switch-primary mr-3">
+                         {{$t('CustomrtIce')}}
+                          <input  type="checkbox" v-model="pos_settings.show_ice">
+                          <span class="slider"></span>
+                        </label>
+                    </b-col>
+
 
                    <!-- Show Phone-->
                     <b-col md="4" class="mt-3 mb-3">
@@ -131,6 +140,7 @@ export default {
       pos_settings:{
         note_customer:"",
         show_note:"",
+        show_ice:"",
         show_barcode:"",
         show_discount:"",
         show_phone:"",
@@ -182,6 +192,7 @@ export default {
         .put("pos_settings/" + this.pos_settings.id, {
           note_customer: this.pos_settings.note_customer,
           show_note: this.pos_settings.show_note,
+          show_ice: this.pos_settings.show_ice,
           show_barcode: this.pos_settings.show_barcode,
           show_discount: this.pos_settings.show_discount,
           show_phone: this.pos_settings.show_phone,

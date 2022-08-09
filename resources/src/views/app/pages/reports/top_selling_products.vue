@@ -162,15 +162,15 @@ export default {
       var self = this;
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "Product Code", dataKey: "code" },
-        { title: "Product Name", dataKey: "name" },
-        { title: "Price", dataKey: "price" },
-        { title: "Total Sales", dataKey: "total_sales" },
-        { title: "Quantity", dataKey: "quantity" },
-        { title: "Total Amount", dataKey: "total" },
+        { title: "Code du produit", dataKey: "code" },
+        { title: "Nom du produit", dataKey: "name" },
+        { title: "Prix", dataKey: "price" },
+        { title: "Total des ventes", dataKey: "total_sales" },
+        { title: "Quantité", dataKey: "quantity" },
+        { title: "Montant total", dataKey: "total" },
       ];
       pdf.autoTable(columns, self.products);
-      pdf.text("Top Selling Products", 40, 25);
+      pdf.text("Produits les plus vendus", 40, 25);
       pdf.save("Top_Selling_Products.pdf");
     },
 

@@ -31,6 +31,7 @@
                      <tr>
                         <td>
                            <div><strong>Nom:</strong> {{$client['client_name']}}</div>
+                           <div><strong>ICE:</strong> {{$client['client_ice']}}</div>
                            <div><strong>Téle:</strong> {{$client['phone']}}</div>
                            <div><strong>Ventes totales:</strong> {{$client['total_sales']}}</div>
                            <div><strong>Monatnt total:</strong> {{$symbol}} {{$client['total_amount']}}</div>
@@ -52,6 +53,7 @@
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
+                           <div><strong>ICE:</strong>  {{$setting['CompanyIce']}}</div>
                            <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
                            <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>

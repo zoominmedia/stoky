@@ -116,6 +116,7 @@ class PurchasesController extends BaseController
             $item['statut'] = $Purchase->statut;
             $item['provider_id'] = $Purchase['provider']->id;
             $item['provider_name'] = $Purchase['provider']->name;
+            $item['provider_ice'] = $Purchase['provider']->ice;
             $item['provider_email'] = $Purchase['provider']->email;
             $item['provider_tele'] = $Purchase['provider']->phone;
             $item['provider_code'] = $Purchase['provider']->code;
@@ -128,7 +129,7 @@ class PurchasesController extends BaseController
             $data[] = $item;
         }
 
-        $suppliers = provider::where('deleted_at', '=', null)->get(['id', 'name']);
+        $suppliers = Provider::where('deleted_at', '=', null)->get(['id', 'name','ice']);
 
          //get warehouses assigned to user
          $user_auth = auth()->user();
@@ -637,6 +638,7 @@ class PurchasesController extends BaseController
         $purchase_data['tax_rate'] = $purchase->tax_rate;
         $purchase_data['TaxNet'] = $purchase->TaxNet;
         $purchase_data['supplier_name'] = $purchase['provider']->name;
+        $purchase_data['supplier_ice'] = $purchase['provider']->ice;
         $purchase_data['supplier_email'] = $purchase['provider']->email;
         $purchase_data['supplier_phone'] = $purchase['provider']->phone;
         $purchase_data['supplier_adr'] = $purchase['provider']->adresse;
@@ -769,6 +771,7 @@ class PurchasesController extends BaseController
             ->findOrFail($id);
 
         $purchase['supplier_name'] = $Purchase_data['provider']->name;
+        $purchase['supplier_ice'] = $Purchase_data['provider']->ice;
         $purchase['supplier_phone'] = $Purchase_data['provider']->phone;
         $purchase['supplier_adr'] = $Purchase_data['provider']->adresse;
         $purchase['supplier_email'] = $Purchase_data['provider']->email;

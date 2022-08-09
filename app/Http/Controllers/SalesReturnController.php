@@ -778,6 +778,7 @@ class SalesReturnController extends BaseController
             ->findOrFail($id);
 
         $return_details['client_name'] = $Sale_Return['client']->name;
+        $return_details['client_ice'] = $Sale_Return['client']->ice;
         $return_details['client_phone'] = $Sale_Return['client']->phone;
         $return_details['client_adr'] = $Sale_Return['client']->adresse;
         $return_details['client_email'] = $Sale_Return['client']->email;

@@ -50,6 +50,7 @@
             <b-col lg="4" md="4" sm="12" class="mb-4">
               <h5 class="font-weight-bold">{{$t('Supplier_Info')}}</h5>
               <div>{{purchase.supplier_name}}</div>
+              <div>{{purchase.supplier_ice}}</div>
               <div>{{purchase.supplier_email}}</div>
               <div>{{purchase.supplier_phone}}</div>
               <div>{{purchase.supplier_adr}}</div>
@@ -57,6 +58,7 @@
             <b-col lg="4" md="4" sm="12" class="mb-4">
               <h5 class="font-weight-bold">{{$t('Company_Info')}}</h5>
               <div>{{company.CompanyName}}</div>
+              <div>{{company.CompanyIce}}</div>
               <div>{{company.email}}</div>
               <div>{{company.CompanyPhone}}</div>
               <div>{{company.CompanyAdress}}</div>

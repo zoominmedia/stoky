@@ -633,6 +633,7 @@
 
             <p>
                 <span>{{$t('date')}} : {{invoice_pos.sale.date}} <br></span>
+                <span v-show="pos_settings.show_address">ICE : {{invoice_pos.setting.CompanyIce}} <br></span>
                 <span v-show="pos_settings.show_address">{{$t('Adress')}} : {{invoice_pos.setting.CompanyAdress}} <br></span>
                 <span v-show="pos_settings.show_email">{{$t('Email')}} : {{invoice_pos.setting.email}} <br></span>
                 <span v-show="pos_settings.show_phone">{{$t('Phone')}} : {{invoice_pos.setting.CompanyPhone}} <br></span>
@@ -1145,20 +1146,20 @@ export default {
       var self = this;
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "Ref", dataKey: "Ref" },
+        { title: "Réf", dataKey: "Ref" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Created_by", dataKey: "created_by" },
-        { title: "Status", dataKey: "statut" },
+        { title: "Magasin", dataKey: "warehouse_name" },
+        { title: "Crée par", dataKey: "created_by" },
+        { title: "état", dataKey: "statut" },
         { title: "Total", dataKey: "GrandTotal" },
-        { title: "Paid", dataKey: "paid_amount" },
-        { title: "Due", dataKey: "due" },
-        { title: "Status Payment", dataKey: "payment_status" },
-        { title: "Shipping Status", dataKey: "shipping_status" }
+        { title: "Payé", dataKey: "paid_amount" },
+        { title: "Dû", dataKey: "due" },
+        { title: "état de Paiement", dataKey: "payment_status" },
+        { title: "état de livraison", dataKey: "shipping_status" }
       ];
       pdf.autoTable(columns, self.sales);
-      pdf.text("Sale List", 40, 25);
-      pdf.save("Sale_List.pdf");
+      pdf.text("Liste des ventes", 40, 25);
+      pdf.save("liste-vente.pdf");
     },
     //-------------------------------- Invoice POS ------------------------------\\
     Invoice_POS(id) {

@@ -53,6 +53,7 @@
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
+                           <div><strong>ICE:</strong>  {{$setting['CompanyIce']}}</div>
                            <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
                            <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>

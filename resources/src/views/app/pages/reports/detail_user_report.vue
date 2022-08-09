@@ -900,16 +900,16 @@ export default {
       var self = this;
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "Username", dataKey: "username" },
-        { title: "Ref", dataKey: "Ref" },
+        { title: "Nom d'utilisateur", dataKey: "username" },
+        { title: "Réf", dataKey: "Ref" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Status", dataKey: "statut" },
+        { title: "Entrepot", dataKey: "warehouse_name" },
+        { title: "Etat", dataKey: "statut" },
         { title: "Total", dataKey: "GrandTotal" },
-        { title: "Paid", dataKey: "paid_amount" },
-        { title: "Due", dataKey: "due" },
-        { title: "Status Payment", dataKey: "payment_status" },
-        { title: "Shipping Status", dataKey: "shipping_status" }
+        { title: "Payé", dataKey: "paid_amount" },
+        { title: "Dû", dataKey: "due" },
+        { title: "Etat de paiement", dataKey: "payment_status" },
+        { title: "Etat_de_paiement", dataKey: "shipping_status" }
       ];
       pdf.autoTable(columns, self.sales);
       pdf.text("Sale List", 40, 25);
@@ -922,12 +922,12 @@ export default {
 
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "Username", dataKey: "username" },
+        { title: "Nom d'utilisateur", dataKey: "username" },
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
+        { title: "Réf", dataKey: "Ref" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Warehouse", dataKey: "warehouse_name" },
-        { title: "Status", dataKey: "statut" },
+        { title: "Magazin", dataKey: "warehouse_name" },
+        { title: "état", dataKey: "statut" },
         { title: "Total", dataKey: "GrandTotal" }
       ];
       pdf.autoTable(columns, self.quotations);

@@ -14,7 +14,6 @@
          <div id="company">
             <div><strong> Date: </strong>{{$quote['date']}}</div>
             <div><strong> Numéro: </strong> {{$quote['Ref']}}</div>
-            <div><strong> Etat: </strong> {{$quote['statut']}}</div>
          </div>
          <div id="Title-heading">
             Devis  : {{$quote['Ref']}}

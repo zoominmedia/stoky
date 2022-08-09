@@ -317,14 +317,14 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
-        { title: "Return", dataKey: "Ref_return" },
-        { title: "Supplier", dataKey: "provider_name" },
-        { title: "Paid by", dataKey: "Reglement" },
-        { title: "Amount", dataKey: "montant" }
+        { title: "Réf", dataKey: "Ref" },
+        { title: "Retour", dataKey: "Ref_return" },
+        { title: "Fournisseur", dataKey: "provider_name" },
+        { title: "Payé par", dataKey: "Reglement" },
+        { title: "Montant", dataKey: "montant" }
       ];
       pdf.autoTable(columns, self.payments);
-      pdf.text("Payments Purchase Returns", 40, 25);
+      pdf.text("Liste des paiements de retour d'achat", 40, 25);
       pdf.save("Payments_Purchase_returns.pdf");
     },
 

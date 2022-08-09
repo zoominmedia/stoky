@@ -314,14 +314,14 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
-        { title: "Sale", dataKey: "Ref_Sale" },
+        { title: "Réf", dataKey: "Ref" },
+        { title: "Vente", dataKey: "Ref_Sale" },
         { title: "Client", dataKey: "client_name" },
-        { title: "Paid by", dataKey: "Reglement" },
-        { title: "Amount", dataKey: "montant" }
+        { title: "Payé par", dataKey: "Reglement" },
+        { title: "Montant", dataKey: "montant" }
       ];
       pdf.autoTable(columns, self.payments);
-      pdf.text("Payments Sales", 40, 25);
+      pdf.text("Paiements des ventes", 40, 25);
       pdf.save("Payments_Sales.pdf");
     },
 

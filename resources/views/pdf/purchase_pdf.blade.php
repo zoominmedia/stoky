@@ -33,6 +33,7 @@
                      <tr>
                         <td>
                            <div><strong>Nom:</strong> {{$purchase['supplier_name']}}</div>
+                           <div><strong>ICE:</strong> {{$purchase['supplier_ice']}}</div>
                            <div><strong>Téle:</strong> {{$purchase['supplier_phone']}}</div>
                            <div><strong>Adresse:</strong>   {{$purchase['supplier_adr']}}</div>
                            <div><strong>Email:</strong>  {{$purchase['supplier_email']}}</div>
@@ -52,6 +53,7 @@
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
+                           <div><strong>ICE:</strong>  {{$setting['CompanyIce']}}</div>
                            <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
                            <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>

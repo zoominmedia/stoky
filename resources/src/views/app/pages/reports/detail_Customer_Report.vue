@@ -630,14 +630,14 @@ export default {
       let pdf = new jsPDF("p", "pt");
       let columns = [
         { title: "Date", dataKey: "date" },
-        { title: "Ref", dataKey: "Ref" },
-        { title: "Sale", dataKey: "Sale_Ref" },
+        { title: "Réf", dataKey: "Ref" },
+        { title: "Vente", dataKey: "Sale_Ref" },
         { title: "Reglement", dataKey: "Reglement" },
-        { title: "Amount", dataKey: "montant" },
+        { title: "Montant", dataKey: "montant" },
       ];
       pdf.autoTable(columns, self.payments);
-      pdf.text("Payments List", 40, 25);
-      pdf.save("Payments_List.pdf");
+      pdf.text("Liste de paiement", 40, 25);
+      pdf.save("List_de_paiement.pdf");
     },
 
     //------------------------------Formetted Numbers -------------------------\\

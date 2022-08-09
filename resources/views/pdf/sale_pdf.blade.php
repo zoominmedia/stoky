@@ -14,8 +14,6 @@
          <div id="company">
             <div><strong> Date: </strong>{{$sale['date']}}</div>
             <div><strong> Numéro: </strong> {{$sale['Ref']}}</div>
-            <div><strong> Etat: </strong> {{$sale['statut']}}</div>
-            <div><strong> Etat de Paiement: </strong> {{$sale['payment_status']}}</div>
          </div>
          <div id="Title-heading">
             Vente  : {{$sale['Ref']}}
@@ -35,6 +33,7 @@
                      <tr>
                         <td>
                            <div><strong>Nom:</strong> {{$sale['client_name']}}</div>
+                           <div><strong>ICE:</strong> {{$sale['client_ice']}}</div>
                            <div><strong>Téle:</strong> {{$sale['client_phone']}}</div>
                            <div><strong>Adresse:</strong>   {{$sale['client_adr']}}</div>
                            <div><strong>Email:</strong>  {{$sale['client_email']}}</div>
@@ -54,6 +53,7 @@
                      <tr>
                         <td>
                            <div id="comp">{{$setting['CompanyName']}}</div>
+                           <div><strong>ICE:</strong>  {{$setting['CompanyIce']}}</div>
                            <div><strong>Adresse:</strong>  {{$setting['CompanyAdress']}}</div>
                            <div><strong>Téle:</strong>  {{$setting['CompanyPhone']}}</div>
                            <div><strong>Email:</strong>  {{$setting['email']}}</div>

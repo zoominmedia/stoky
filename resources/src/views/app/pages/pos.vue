@@ -762,6 +762,7 @@
                 <h2 class="text-center">{{invoice_pos.setting.CompanyName}}</h2>
                 <p>
                   <span>{{$t('date')}} : {{invoice_pos.sale.date}} <br></span>
+                  <span v-show="pos_settings.show_ice">ICE : {{invoice_pos.setting.CompanyIce}} <br></span>
                   <span v-show="pos_settings.show_address">{{$t('Adress')}} : {{invoice_pos.setting.CompanyAdress}} <br></span>
                   <span v-show="pos_settings.show_email">{{$t('Email')}} : {{invoice_pos.setting.email}} <br></span>
                   <span v-show="pos_settings.show_phone">{{$t('Phone')}} : {{invoice_pos.setting.CompanyPhone}} <br></span>

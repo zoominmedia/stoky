@@ -414,17 +414,17 @@ export default {
 
       let pdf = new jsPDF("p", "pt");
       let columns = [
-        { title: "name", dataKey: "name" },
+        { title: "nom", dataKey: "name" },
         { title: "code", dataKey: "code" },
-        { title: "category", dataKey: "category" },
-        { title: "brand", dataKey: "brand" },
-        { title: "price", dataKey: "price" },
-        { title: "unit", dataKey: "unit" },
-        { title: "quantity", dataKey: "quantity" }
+        { title: "catégorie", dataKey: "category" },
+        { title: "marque", dataKey: "brand" },
+        { title: "prix", dataKey: "price" },
+        { title: "unité", dataKey: "unit" },
+        { title: "quantité", dataKey: "quantity" }
       ];
       pdf.autoTable(columns, self.products);
-      pdf.text("Product List", 40, 25);
-      pdf.save("Product_List.pdf");
+      pdf.text("Liste des produits", 40, 25);
+      pdf.save("List_Produit.pdf");
     },
 
     //----------------------------------- Show import products -------------------------------\\

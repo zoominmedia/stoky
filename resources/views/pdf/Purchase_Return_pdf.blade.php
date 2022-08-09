@@ -15,8 +15,6 @@
             <div><strong> Date: </strong>{{$return_purchase['date']}}</div>
             <div><strong> Numéro: </strong> {{$return_purchase['Ref']}}</div>
             <div><strong> Réf d'achat: </strong> {{$return_purchase['purchase_ref']}}</div>
-            <div><strong> Etat: </strong> {{$return_purchase['statut']}}</div>
-            <div><strong> Etat de paiement: </strong> {{$return_purchase['payment_status']}}</div>
          </div>
          <div id="Title-heading">
             Retour : {{$return_purchase['Ref']}}
